@@ -5,11 +5,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Add dependencies:
 
 - [react-router-dom@6](https://reactrouter.com/docs/en/v6/getting-started/overview)
-- sanitize.css
+- [sanitize.css](https://www.npmjs.com/package/sanitize.css)
 
 Add devDependencies:
 
-- sass
+- [sass](https://www.npmjs.com/package/sass)
 
 ## Author
 
