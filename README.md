@@ -4,6 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Add dependencies:
 
+- [react-router-dom@6](https://reactrouter.com/docs/en/v6/getting-started/overview)
 - sanitize.css
 
 Add devDependencies:
@@ -12,6 +13,6 @@ Add devDependencies:
 
 ## Author
 
-- Website - [thicode.fr/](https://thicode.fr/)
+- Website - [thicode.fr](https://thicode.fr/)
 - Frontend Mentor - [@ThiCode126](https://www.frontendmentor.io/profile/ThiCode126)
 - Twitter - [@code_thi](https://twitter.com/code_thi)
