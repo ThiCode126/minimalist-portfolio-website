@@ -1,6 +1,6 @@
 body {
-  color: var(--white);
-  background-color: var(--dark);
+  color: $grayish-dark-blue;
+  background-color: $very-light-grey;
 }
 
 .cw {
@@ -8,17 +8,30 @@ body {
   margin: 0 auto;
 }
 
-.sro {
-  display: none;
-  visibility: hidden;
-} // Screen Reader Only
-
-:where(h1, h2, h3, h4, h5, h6, p) {
-  @include mY(0);
+@mixin heading_1 {
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: bold;
+  @include text(50px, 50px, -0.45px);
 }
-
-:where(a, button) {
-  cursor: pointer;
+@mixin heading_2 {
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: bold;
+  @include text(40px, 42px, -0.36px);
+}
+@mixin heading_3 {
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: normal;
+  @include text(32px, 36px, -0.29px);
+}
+@mixin body_1 {
+  font-family: "Public Sans", sans-serif;
+  font-weight: normal;
+  @include text(16px, 30px);
+}
+@mixin body_2 {
+  font-family: "Public Sans", sans-serif;
+  font-weight: normal;
+  @include text(15px, 30px);
 }
 
 /**
