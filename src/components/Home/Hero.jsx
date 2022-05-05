@@ -8,7 +8,15 @@ import { ReactComponent as ArrowDownSVG } from "../../assets/icons/down-arrows.s
 
 const Hero = () => {
   const { type } = useWindowDimensions();
-  console.log(type);
+
+  const scrollToAbout = () => {
+    let e = document.getElementById("home__about");
+    e.scrollIntoView({
+      block: "start",
+      behavior: "smooth",
+      inline: "start",
+    });
+  };
 
   return (
     <section id="home__hero">
@@ -23,7 +31,7 @@ const Hero = () => {
       )}
       <div className="text">
         <h1>Hey, I’m Alex Spencer and I love building beautiful websites</h1>
-        <div className="btn about">
+        <div className="btn about" onClick={scrollToAbout}>
           <div className="arrow">{<ArrowDownSVG />}</div>
           <span>About Me</span>
         </div>

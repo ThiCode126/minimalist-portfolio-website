@@ -11,6 +11,13 @@ body {
 .btn {
   cursor: pointer;
   transition: all ease 0.5s;
+
+  &.secondary {
+    @include flexCenter;
+    text-transform: uppercase;
+    border: 1px solid $grayish-dark-blue;
+    @include text(12px, 14px, 2px);
+  }
 }
 
 @mixin heading_3 {

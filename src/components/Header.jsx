@@ -20,7 +20,10 @@ const Header = () => {
           <span className="bar bar__2"></span>
           <span className="bar bar__3"></span>
         </div>
-        <nav className={`${isNavOpen ? "open" : "closed"}`}>
+        <nav
+          className={`${isNavOpen ? "open" : "closed"}`}
+          onClick={() => setIsNavOpen(false)}
+        >
           <ul>
             <li>
               <NavLink
