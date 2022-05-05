@@ -113,6 +113,9 @@
       text-align: left;
       @include grid1R(177px);
       align-items: center;
+      h2 {
+        margin-bottom: 0;
+      }
 
       .btn {
         position: relative;
@@ -141,6 +144,27 @@
         h1 {
           @include pY(56px, 53px);
           @include text(50px, 50px, -0.45px);
+        }
+      }
+    }
+    &__about {
+      width: 1015px;
+      gap: 125px;
+      img {
+        @include wh(540px, 600px);
+      }
+      .text {
+        @include pY(50px, 46px);
+      }
+    }
+    &__interested {
+      @include pY(150px);
+      @include grid1R(598px);
+
+      .btn {
+        &::before {
+          left: -566px;
+          width: 534px;
         }
       }
     }
