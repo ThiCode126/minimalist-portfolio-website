@@ -4,20 +4,15 @@ body {
 }
 
 .cw {
-  width: 327px;
+  width: 311px;
   margin: 0 auto;
 }
 
-@mixin heading_1 {
-  font-family: "Ibarra Real Nova", serif;
-  font-weight: bold;
-  @include text(50px, 50px, -0.45px);
+.btn {
+  cursor: pointer;
+  transition: all ease 0.5s;
 }
-@mixin heading_2 {
-  font-family: "Ibarra Real Nova", serif;
-  font-weight: bold;
-  @include text(40px, 42px, -0.36px);
-}
+
 @mixin heading_3 {
   font-family: "Ibarra Real Nova", serif;
   font-weight: normal;

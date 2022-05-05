@@ -1,0 +1,76 @@
+#home {
+  &__hero {
+    margin-bottom: 96px;
+    .text {
+      background-color: $very-light-grey;
+      h1 {
+        font-family: "Ibarra Real Nova", serif;
+        font-weight: 700;
+        @include text(40px, 42px, -0.36px);
+        @include pY(24px, 32px);
+      }
+      .btn.about {
+        background-color: $dark-blue;
+        @include wh(200px, 48px);
+        display: grid;
+        grid-template-columns: 48px auto;
+        &:hover {
+          background-color: $slightly-desaturated-cyan;
+          svg {
+            g {
+              stroke: var(--white);
+            }
+          }
+        }
+        .arrow {
+          background-color: $dark01;
+          @include flexCenter;
+        }
+        span {
+          color: var(--white);
+          font-family: "Public Sans", sans-serif;
+          font-weight: 400;
+          @include text(12px, 14px, 2px);
+          text-transform: uppercase;
+          @include flexCenter;
+        }
+      }
+    }
+  }
+}
+
+/**
+* ? Tablet
+*/
+@media (min-width: 768px) {
+  #home {
+    &__hero {
+      position: relative;
+      .text {
+        position: absolute;
+        bottom: 0;
+        width: 514px;
+        h1 {
+          @include pY(56px, 48px);
+        }
+      }
+    }
+  }
+}
+
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+  #home {
+    &__hero {
+      .text {
+        width: 445px;
+        h1 {
+          @include pY(56px, 53px);
+          @include text(50px, 50px, -0.45px);
+        }
+      }
+    }
+  }
+}

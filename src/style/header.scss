@@ -1,0 +1,126 @@
+#header {
+  .cw {
+    @include flexSpaceBetween;
+
+    li {
+      font-family: "Public Sans", sans-serif;
+      font-weight: 400;
+      @include text(12px, 14px, 2px);
+    }
+  }
+}
+
+/**
+* ? Mobile Only
+*/
+@media (max-width: 767px) {
+  #header {
+    padding: 32px 32px 40px;
+    .cw {
+      position: relative;
+      .toggle-menu {
+        cursor: pointer;
+        @include wh(24px);
+        position: relative;
+
+        &.to-closed {
+          .bar {
+            &__1 {
+              transform: rotate(-45deg);
+              top: 12px;
+            }
+            &__2 {
+              transform: translateX(250px);
+            }
+            &__3 {
+              transform: rotate(45deg);
+              top: 12px;
+            }
+          }
+        }
+
+        .bar {
+          transition: all ease 0.5s;
+          background-color: $grayish-dark-blue;
+          position: absolute;
+          left: 0;
+          width: 24px;
+          height: 1px;
+          &__1 {
+            top: 6px;
+          }
+          &__2 {
+            top: 12px;
+          }
+          &__3 {
+            top: 18px;
+          }
+        }
+      }
+      nav {
+        transition: all ease 0.5s;
+        position: absolute;
+        right: 0;
+        &.open {
+          top: 56px;
+        }
+        &.closed {
+          top: -500px;
+        }
+        ul {
+          width: 223px;
+          padding: 40px;
+          margin: 0;
+          text-align: center;
+          background-color: $grayish-dark-blue;
+          display: flex;
+          flex-direction: column;
+          gap: 32px;
+          li {
+            a {
+              color: var(--white);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+* ? Tablet
+*/
+@media (min-width: 768px) {
+  #header {
+    @include pY(64px, 47px);
+    .cw {
+      .toggle-menu {
+        display: none;
+      }
+      nav {
+        ul {
+          display: flex;
+          gap: 42px;
+          li {
+            a {
+              color: $grayish-dark-blue;
+              &.active {
+                color: $slightly-desaturated-cyan;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+  #header {
+    .cw {
+    }
+  }
+}
