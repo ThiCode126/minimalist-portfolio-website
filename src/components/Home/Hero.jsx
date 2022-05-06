@@ -1,4 +1,5 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import heroDesktop from "../../assets/homepage/desktop/image-homepage-hero.jpg";
 import heroTablet from "../../assets/homepage/tablet/image-homepage-hero.jpg";
 import heroMobile from "../../assets/homepage/mobile/image-homepage-hero.jpg";
@@ -21,13 +22,13 @@ const Hero = () => {
   return (
     <section id="home__hero">
       {type === "mobile" && (
-        <img src={heroMobile} alt="Hero" width="311" height="271" />
+        <LazyLoadImage src={heroMobile} alt="Hero" width="311" height="271" />
       )}
       {type === "tablet" && (
-        <img src={heroTablet} alt="Hero" width="688" height="600" />
+        <LazyLoadImage src={heroTablet} alt="Hero" width="688" height="600" />
       )}
       {type === "desktop" && (
-        <img src={heroDesktop} alt="Hero" width="1110" height="600" />
+        <LazyLoadImage src={heroDesktop} alt="Hero" width="1110" height="600" />
       )}
       <div className="text">
         <h1>Hey, I’m Alex Spencer and I love building beautiful websites</h1>
