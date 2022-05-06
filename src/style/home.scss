@@ -64,21 +64,6 @@
       }
     }
   }
-  &__interested {
-    @include pY(115px, 80px);
-    text-align: center;
-
-    h2 {
-      margin-bottom: 40px;
-      font-family: "Ibarra Real Nova", serif;
-      font-weight: 700;
-      @include text(40px, 42px, -0.36px);
-    }
-    .btn {
-      @include wh(162px, 48px);
-      @include mX(auto);
-    }
-  }
 }
 
 /**
@@ -108,28 +93,6 @@
         @include pY(50px, 46px);
       }
     }
-    &__interested {
-      @include pY(96px);
-      text-align: left;
-      @include grid1R(177px);
-      align-items: center;
-      h2 {
-        margin-bottom: 0;
-      }
-
-      .btn {
-        position: relative;
-
-        &::before {
-          position: absolute;
-          content: "";
-          background-color: $grayish-dark-blue015;
-          @include wh(113px, 1px);
-          left: -145px;
-          top: 24px;
-        }
-      }
-    }
   }
 }
 
@@ -155,17 +118,6 @@
       }
       .text {
         @include pY(50px, 46px);
-      }
-    }
-    &__interested {
-      @include pY(150px);
-      @include grid1R(598px);
-
-      .btn {
-        &::before {
-          left: -566px;
-          width: 534px;
-        }
       }
     }
   }
