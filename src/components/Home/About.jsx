@@ -1,40 +1,20 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import profileDesktop from "../../assets/homepage/desktop/image-homepage-profile.jpg";
-import profileTablet from "../../assets/homepage/tablet/image-homepage-profile.jpg";
-import profileMobile from "../../assets/homepage/mobile/image-homepage-profile.jpg";
 import useWindowDimensions from "../../utils/useWindowDimensions";
 import { redirectTo } from "../../utils/utils";
+import { homeAboutSize } from "../../utils/imgSize";
 
 const About = () => {
   const { type } = useWindowDimensions();
 
   return (
     <section id="home__about">
-      {type === "mobile" && (
-        <LazyLoadImage
-          src={profileMobile}
-          alt="Hero"
-          width="311"
-          height="346"
-        />
-      )}
-      {type === "tablet" && (
-        <LazyLoadImage
-          src={profileTablet}
-          alt="Hero"
-          width="280"
-          height="600"
-        />
-      )}
-      {type === "desktop" && (
-        <LazyLoadImage
-          src={profileDesktop}
-          alt="Hero"
-          width="540"
-          height="600"
-        />
-      )}
+      <LazyLoadImage
+        src={`./assets/homepage/${type}/image-homepage-profile.jpg`}
+        alt="image-homepage-profile"
+        width={homeAboutSize[type].width}
+        height={homeAboutSize[type].height}
+      />
 
       <div className="text">
         <h2>About Me</h2>

@@ -1,9 +1,7 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import heroDesktop from "../../assets/homepage/desktop/image-homepage-hero.jpg";
-import heroTablet from "../../assets/homepage/tablet/image-homepage-hero.jpg";
-import heroMobile from "../../assets/homepage/mobile/image-homepage-hero.jpg";
 import useWindowDimensions from "../../utils/useWindowDimensions";
+import { homeHeroSize } from "../../utils/imgSize";
 
 import { ReactComponent as ArrowDownSVG } from "../../assets/icons/down-arrows.svg";
 
@@ -21,15 +19,12 @@ const Hero = () => {
 
   return (
     <section id="home__hero">
-      {type === "mobile" && (
-        <LazyLoadImage src={heroMobile} alt="Hero" width="311" height="271" />
-      )}
-      {type === "tablet" && (
-        <LazyLoadImage src={heroTablet} alt="Hero" width="688" height="600" />
-      )}
-      {type === "desktop" && (
-        <LazyLoadImage src={heroDesktop} alt="Hero" width="1110" height="600" />
-      )}
+      <LazyLoadImage
+        src={`./assets/homepage/${type}/image-homepage-hero.jpg`}
+        alt="image-homepage-hero"
+        width={homeHeroSize[type].width}
+        height={homeHeroSize[type].height}
+      />
       <div className="text">
         <h1>Hey, I’m Alex Spencer and I love building beautiful websites</h1>
         <div className="btn about" onClick={scrollToAbout}>

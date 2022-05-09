@@ -60,6 +60,7 @@
       nav {
         transition: all ease 0.5s;
         position: absolute;
+        z-index: 20;
         right: 0;
         &.open {
           top: 56px;
