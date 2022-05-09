@@ -1,6 +1,16 @@
 #interested {
-  @include pY(115px, 80px);
+  padding-bottom: 80px;
   text-align: center;
+
+  &.home {
+    padding-top: 115px;
+  }
+  &.portfolio {
+    padding-top: 80px;
+  }
+  &.details {
+    padding-top: 64px;
+  }
 
   h2 {
     margin-bottom: 40px;

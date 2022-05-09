@@ -1,10 +1,9 @@
 #portfolio {
   .cw {
+    @include flexColumn(72px);
     .card {
-      margin-bottom: 72px;
-      img {
-        margin-bottom: 32px;
-      }
+      @include flexColumn(32px);
+      align-items: center;
       .body {
         @include pY(24px);
         border-top: 1px solid $grayish-dark-blue015;
@@ -23,6 +22,58 @@
         }
         .btn {
           @include wh(175px, 48px);
+        }
+      }
+    }
+  }
+}
+
+/**
+* ? Tablet
+*/
+@media (min-width: 768px) {
+  #portfolio {
+    .cw {
+      gap: 80px;
+      .card {
+        flex-direction: row;
+        gap: 69px;
+        &:nth-child(even) {
+          flex-direction: row-reverse;
+        }
+
+        .body {
+          @include pY(32px, 50px);
+
+          p {
+            @include mY(29px, 35px);
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+  #portfolio {
+    .cw {
+      .card {
+        width: 1015px;
+        gap: 125px;
+        &:nth-child(even) {
+          margin-left: auto;
+        }
+
+        .body {
+          @include pY(103px);
+
+          p {
+            @include mY(28px, 24px);
+            font-style: 16px;
+          }
         }
       }
     }
