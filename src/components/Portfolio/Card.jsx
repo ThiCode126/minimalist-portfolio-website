@@ -15,14 +15,14 @@ const Card = ({ item }) => {
         height={cardPortfolioSize[type].height}
       />
       <div className="body">
-        {item.title}
+        <h2>{item.title}</h2>
         <p>{item.shortDesc}</p>
 
         <div
           className="btn secondary"
           onClick={() => redirectTo("/portfolio/" + item.id)}
         >
-          Go to portfolio
+          View Project
         </div>
       </div>
     </div>

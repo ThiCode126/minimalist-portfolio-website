@@ -1,0 +1,30 @@
+#portfolio {
+  .cw {
+    .card {
+      margin-bottom: 72px;
+      img {
+        margin-bottom: 32px;
+      }
+      .body {
+        @include pY(24px);
+        border-top: 1px solid $grayish-dark-blue015;
+        border-bottom: 1px solid $grayish-dark-blue015;
+        .title {
+          font-family: "Ibarra Real Nova", serif;
+          font-weight: 700;
+          @include text(40px, 42px, -0.36px);
+        }
+        p {
+          font-family: "Public Sans", sans-serif;
+          font-weight: 400;
+          @include text(15px, 30px);
+          opacity: 0.8;
+          @include mY(24px);
+        }
+        .btn {
+          @include wh(175px, 48px);
+        }
+      }
+    }
+  }
+}
