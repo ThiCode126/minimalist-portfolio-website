@@ -1,0 +1,201 @@
+#detail {
+  .cw {
+    .hero {
+      margin-bottom: 40px;
+    }
+
+    .body {
+      @include flexColumn(48px);
+      align-items: flex-start;
+      .first {
+        @include pY(24px);
+        border-top: 1px solid $grayish-dark-blue015;
+        border-bottom: 1px solid $grayish-dark-blue015;
+        .title {
+          font-family: "Ibarra Real Nova", serif;
+          font-weight: 700;
+          @include text(40px, 42px, -0.36px);
+        }
+        p {
+          font-family: "Public Sans", sans-serif;
+          &.short-desc {
+            font-weight: 400;
+            @include text(15px, 30px);
+            opacity: 0.8;
+            @include mY(24px);
+          }
+          &.category,
+          &.hashtag {
+            font-weight: 700;
+            @include text(13px, 30px);
+            color: $slightly-desaturated-cyan;
+          }
+        }
+        .btn {
+          margin-top: 24px;
+          @include wh(175px, 48px);
+        }
+      }
+      .second {
+        h3 {
+          font-family: "Ibarra Real Nova", serif;
+          font-weight: 700;
+          @include text(32px, 42px, -0.29px);
+        }
+        .bg-text {
+          font-family: "Public Sans", sans-serif;
+          font-weight: 400;
+          @include text(15px, 30px);
+          @include mY(28px, 40px);
+        }
+        .img-preview {
+          @include flexColumn(32px);
+          @include mY(40px, 64px);
+        }
+      }
+    }
+    .footer {
+      display: grid;
+      grid-template-columns: repeat(2, 160px);
+      .previous,
+      .next {
+        cursor: pointer;
+        border-top: 1px solid $grayish-dark-blue015;
+        border-bottom: 1px solid $grayish-dark-blue015;
+        @include pY(24px);
+        h4 {
+          margin-top: 16px;
+          font-family: "Ibarra Real Nova", serif;
+          font-weight: 400;
+          @include text(32px, 36px, -0.29px);
+        }
+        span {
+          font-family: "Public Sans", sans-serif;
+          font-weight: 400;
+          @include text(16px, 30px);
+          opacity: 0.5;
+        }
+      }
+      .previous {
+        border-right: 1px solid $grayish-dark-blue015;
+      }
+      .next {
+        text-align: right;
+      }
+    }
+  }
+}
+
+/**
+* ? Tablet
+*/
+@media (min-width: 768px) {
+  #detail {
+    .cw {
+      .body {
+        gap: 40px;
+
+        .second {
+          .img-preview {
+            margin-bottom: 80px;
+          }
+        }
+      }
+      .footer {
+        grid-template-columns: repeat(2, 345px);
+        .previous,
+        .next {
+          @include flexRow(32px);
+          align-items: center;
+          @include pY(32px);
+          h4 {
+            margin-top: 0;
+          }
+        }
+        .next {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+  }
+}
+
+/**
+* ? ONLY Tablet
+*/
+@media (min-width: 768px) and (max-width: 1339px) {
+  #detail {
+    .cw {
+      .body {
+        gap: 40px;
+        .first {
+          @include pY(32px);
+          display: grid;
+          column-gap: 12px;
+          grid-template-areas:
+            "title short-desc"
+            "category short-desc"
+            "hashtag short-desc"
+            "btn short-desc";
+          grid-template-columns: auto 339px;
+
+          .title {
+            grid-area: title;
+          }
+          p.short-desc {
+            grid-area: short-desc;
+
+            margin: 0;
+          }
+          .category {
+            grid-area: category;
+          }
+          .hashtag {
+            grid-area: hashtag;
+          }
+          .btn {
+            grid-area: btn;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+  #detail {
+    .cw {
+      .hero {
+        margin-bottom: 115px;
+      }
+      .body {
+        gap: 125px;
+        flex-direction: row;
+        .first {
+          @include pY(48px);
+          p {
+            &.short-desc {
+              @include mY(29px, 23px);
+            }
+            &.category {
+              font-size: 16px;
+              margin-bottom: 16px;
+            }
+            &.hashtag {
+              font-size: 16px;
+            }
+          }
+          .btn {
+            margin-top: 32px;
+          }
+        }
+      }
+      .footer {
+        grid-template-columns: 555px 554px;
+      }
+    }
+  }
+}

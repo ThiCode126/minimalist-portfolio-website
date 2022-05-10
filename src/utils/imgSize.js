@@ -41,3 +41,31 @@ export const homeHeroSize = {
     height: "600",
   },
 };
+export const detailHeroSize = {
+  mobile: {
+    width: "311",
+    height: "140",
+  },
+  tablet: {
+    width: "689",
+    height: "310",
+  },
+  desktop: {
+    width: "1100",
+    height: "500",
+  },
+};
+export const detailPreviewSize = {
+  mobile: {
+    width: "313",
+    height: "197",
+  },
+  tablet: {
+    width: "689",
+    height: "434",
+  },
+  desktop: {
+    width: "635",
+    height: "400",
+  },
+};
